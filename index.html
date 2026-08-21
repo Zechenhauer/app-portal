@@ -34,15 +34,14 @@
   <!-- Hauptinhalt -->
   <main class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
     
-    <!-- Kombinierter Hero-Banner mit Logo & Profil-Badge -->
+    <!-- Kombinierter Hero-Banner -->
     <div class="mb-10 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900/90 to-slate-950 border border-slate-800/80 shadow-2xl relative overflow-hidden">
-      <!-- Glow Effekte im Hintergrund -->
       <div class="absolute -right-16 -top-16 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
       <div class="absolute -left-16 -bottom-16 w-80 h-80 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
       
       <div class="relative z-10 space-y-6">
         
-        <!-- Integrierte Header-Zeile (Logo + Titel + Profil-Badge) -->
+        <!-- Integrierte Header-Zeile -->
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-800/80">
           
           <!-- Vereinslogo & Titel -->
@@ -64,7 +63,7 @@
             </div>
           </div>
 
-          <!-- Entwickler / Profil-Badge (Jürgen Schützendorf) -->
+          <!-- Profil-Badge -->
           <div class="flex items-center gap-3 bg-slate-800/50 border border-slate-700/60 rounded-full py-1.5 px-3.5 shadow-inner self-start md:self-auto">
             <div class="text-right">
               <p class="text-xs font-semibold text-slate-200 leading-tight">Jürgen Schützendorf</p>
@@ -82,7 +81,7 @@
 
         </div>
 
-        <!-- Banner Willkommenstext -->
+        <!-- Banner Willkommenstext + Passwort- & PC-Hinweis -->
         <div>
           <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full mb-3">
             <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Custom Web Apps
@@ -93,6 +92,12 @@
           <p class="text-slate-300 max-w-3xl text-sm sm:text-base leading-relaxed">
             Willkommen! Hier findest du alle von mir entwickelten Digital-Tools, Tabellen und Auswertungen auf einen Blick. Sämtliche App-Entwicklungen sowie die regelmäßige Datenpflege stelle ich als privaten Service zur Verfügung.
           </p>
+          <div class="mt-4 p-3 bg-amber-500/10 border border-amber-500/20 rounded-2xl text-xs sm:text-sm text-amber-300/90 flex flex-col sm:flex-row items-start sm:items-center gap-2">
+            <span class="font-semibold flex items-center gap-1.5 text-amber-400">
+              <i data-lucide="info" class="w-4 h-4 flex-shrink-0"></i> Hinweis:
+            </span>
+            <span>Sämtliche Passwörter für geschützte Bereiche sind direkt bei Jürgen Schützendorf zu erfragen. Das Portal lässt sich optimal am Smartphone sowie am PC / Laptop nutzen!</span>
+          </div>
         </div>
 
       </div>
@@ -105,7 +110,7 @@
 
   </main>
 
-  <!-- Passwort-Modal (Pop-up mit Info-Box) -->
+  <!-- Passwort-Modal -->
   <div id="password-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
     <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-md w-full p-6 shadow-2xl relative transform transition-all">
       
@@ -123,7 +128,6 @@
         </div>
       </div>
 
-      <!-- Erläuterung zum Anmeldeformular -->
       <div id="modal-login-hint" class="mb-4 p-3 bg-blue-950/50 border border-blue-800/60 rounded-xl text-xs text-blue-200 flex items-start gap-2.5">
         <i data-lucide="info" class="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5"></i>
         <span id="modal-hint-text">Anmelde-Hinweis...</span>
@@ -170,7 +174,6 @@
   <!-- Script & App-Daten -->
   <script>
     const apps = [
-      // KACHEL 1: Digitale Spielerkarte aller Liga-Spieler
       {
         id: "spielerkarten-2627",
         type: "single",
@@ -178,14 +181,12 @@
         title: "Digitale Spielerkarte aller Liga Spieler",
         season: "Saison 2026/2027",
         description: "Die kompletten Statistiken, Averages, Bilanzen und Highlights für jeden Liga-Spieler übersichtlich im Überblick.",
-        image: "Jürgen Spielerkarte.png",
+        image: "Juergen Spielerkarte.png",
         url: "https://zechenhauer.github.io/Spielerkarten-Alle-Liga-Spieler/",
-        password: "spielerkarte-1921",
+        password: "passwort-spielerkarte",
         loginHint: "Zugang nur für aktive Ligaspieler. Das Passwort erfährst du bei Jürgen Schützendorf.",
         tags: ["Statistik", "Liga", "Spielerkarten"]
       },
-      
-      // KACHEL 2: Komplette Match-Statistiken aller 4 Teams
       {
         id: "spieltage-statistiken-hub",
         type: "multi",
@@ -195,16 +196,14 @@
         description: "Saisonübersicht und detaillierte Match-Statistiken aller Spieltage auf Basis der 3K-Software. Ein Klick auf ein beliebiges Spiel öffnet eine Detailkarte mit allen Matchdaten und Scores.",
         image: "Komplette Ergebnisse.png",
         tags: ["3K Software", "Match-Daten", "Spieltage"],
-        loginHint: "Jede Mannschaft hat ein eigenes Passwort für den Spielberichtszugang. Erfrage das Passwort bei Jürgen Schützendorf.",
+        loginHint: "Jede Mannschaft hat ein eigenes Passwort für den Spielberichtszugang. Erfrage das Passwort bei deinem Teamkapitän oder bei Jürgen Schützendorf.",
         teams: [
-          { name: "TV Kapellen 1", url: "https://zechenhauer.github.io/TV-Kapellen-1/", password: "TVK1-001" },
-          { name: "TV Kapellen 2", url: "https://zechenhauer.github.io/TV-Kapellen-2/", password: "TVK2-002" },
-          { name: "TV Kapellen 3", url: "https://zechenhauer.github.io/saison26-27/", password: "TVK3-003" },
-          { name: "TV Kapellen 4", url: "https://zechenhauer.github.io/TV-Kapellen-4/", password: "TVK4-004" }
+          { name: "TV Kapellen 1", url: "https://zechenhauer.github.io/TV-Kapellen-1/", password: "passwort1" },
+          { name: "TV Kapellen 2", url: "https://zechenhauer.github.io/TV-Kapellen-2/", password: "passwort2" },
+          { name: "TV Kapellen 3", url: "https://zechenhauer.github.io/saison26-27/", password: "passwort3" },
+          { name: "TV Kapellen 4", url: "https://zechenhauer.github.io/TV-Kapellen-4/", password: "passwort4" }
         ]
       },
-
-      // KACHEL 3: Spieler- & Matchup-Analyse
       {
         id: "spieler-matchup-analyse",
         type: "single",
@@ -214,14 +213,10 @@
         description: "Detaillierte Head-to-Head-Analyse für jeden einzelnen Spieler. Ermöglicht gezielte Auswertungen aller Einzel- und Doppel-Matches gegen spezifische Gegner-Teams und gegnerische Spieler samt Averages, Match-Bilanzen und High-Scores.",
         image: "Spieler Match Analyse.png",
         url: "https://zechenhauer.github.io/spieler_analyse/",
-        password: "analyse-1921",
-        loginHint: "Geschützter Analysebereich. Nach der Freischaltung kannst du im Dropdown-Menü deinen Namen oder deinen Gegner auswählen.",
+        password: "passwort-analyse",
+        loginHint: "Geschützter Analysebereich. Das Passwort erhältst du direkt bei Jürgen Schützendorf.",
         tags: ["Analyse", "Head-to-Head", "Matchups"]
       },
-
-      // --- ÖFFENTLICHE APPS ---
-
-      // KACHEL 4: Spieltage-Planer aller Teams
       {
         id: "spieltage-planer-2627",
         type: "single",
@@ -233,8 +228,6 @@
         url: "https://zechenhauer.github.io/dart_spielplaner/",
         tags: ["Spielplan", "Filter", "Alle Teams"]
       },
-
-      // KACHEL 5: Ligatabellen & Spieltage
       {
         id: "ligatabellen-2627",
         type: "single",
@@ -246,8 +239,6 @@
         url: "https://zechenhauer.github.io/TVK-Tabellen/",
         tags: ["Tabellen", "Ergebnisse", "Liga"]
       },
-
-      // KACHEL 6: Vereinsranking
       {
         id: "vereinsranking-2627",
         type: "single",
@@ -259,8 +250,6 @@
         url: "https://zechenhauer.github.io/Spieler_Vereinsranking/",
         tags: ["Ranking", "Bestleistungen", "Highlights"]
       },
-
-      // KACHEL 7: Gesamtstatistik der Mannschaften
       {
         id: "gesamtstatistik-mannschaften-2526",
         type: "single",
@@ -323,7 +312,6 @@
         }
 
         card.innerHTML = `
-          <!-- Bild-Container -->
           <div class="relative h-56 bg-slate-950 overflow-hidden border-b border-slate-800/80">
             <img 
               src="${app.image}" 
@@ -348,7 +336,6 @@
             `}
           </div>
 
-          <!-- Content-Container -->
           <div class="p-5 flex-1 flex flex-col justify-between">
             <div>
               <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-2">
